@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/deweis/fCC-markdownPreviewer/issues"
   },
-  "homepage": "https://github.com/deweis/fCC-markdownPreviewer#readme"
+  "homepage": "https://github.com/deweis/fCC-markdownPreviewer#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
