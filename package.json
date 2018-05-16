@@ -1,0 +1,19 @@
+{
+  "name": "fcc-markdownpreviewer",
+  "version": "1.0.0",
+  "description": "fCC Challenge - Build a Markdown Previewer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deweis/fCC-markdownPreviewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deweis/fCC-markdownPreviewer/issues"
+  },
+  "homepage": "https://github.com/deweis/fCC-markdownPreviewer#readme"
+}
