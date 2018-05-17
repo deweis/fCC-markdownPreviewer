@@ -1,3 +1,20 @@
+// Variables
+$body-bg: #fff;
+$main-font: 'Roboto';
+
+// Reset default margin / padding
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// CSS...
+body {
+  background: $body-bg;
+  font-family: $main-font;
+}
+
 .page-title {
-  color: red;
+  padding: 1em;
+  text-align: center;
 }
