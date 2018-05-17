@@ -4,10 +4,10 @@ $main-font: 'Roboto';
 
 // Functions
 @function set-text-color($bg-color) {
-  @if(lightness($bg-color) > 50) {
-    @return #000;
+  @if(lightness($bg-color) > 50) {  // if lightness of the bg-color is greater than 50%
+    @return #000;                   // set the color to black
   } @else {
-    @return #fff;
+    @return #fff;                   // else set it to white
   }
 }
 
@@ -33,5 +33,9 @@ header {
 
   h1 {
     padding: 0.2em;
+  }
+
+  h3 {
+    color: darken(set-text-color($body-bg), 20%);
   }
 }
