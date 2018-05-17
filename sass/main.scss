@@ -1,15 +1,6 @@
-// Variables
-$body-bg: #000;
-$main-font: 'Roboto';
-
-// Functions
-@function set-text-color($bg-color) {
-  @if(lightness($bg-color) > 50) {  // if lightness of the bg-color is greater than 50%
-    @return #000;                   // set the color to black
-  } @else {
-    @return #fff;                   // else set it to white
-  }
-}
+// Import from partials
+@import 'variables';
+@import 'functions';
 
 // Reset default margin / padding
 * {
@@ -27,12 +18,12 @@ header {
   color: set-text-color($body-bg);
   padding: 1em;
   text-align: center;
-  &:hover {
-    color: yellow;
-  }
 
   h1 {
     padding: 0.2em;
+    &:hover {
+      color: yellow;
+    }
   }
 
   h3 {
