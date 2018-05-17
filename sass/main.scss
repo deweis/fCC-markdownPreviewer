@@ -23,8 +23,12 @@ body {
   font-family: $main-font;
 }
 
-.page-title {
+header {
   color: set-text-color($body-bg);
   padding: 1em;
   text-align: center;
+
+  h1 {
+    padding: 0.2em;
+  }
 }

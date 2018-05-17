@@ -6,7 +6,9 @@ body {
   background: #000;
   font-family: "Roboto"; }
 
-.page-title {
+header {
   color: #fff;
   padding: 1em;
   text-align: center; }
+  header h1 {
+    padding: 0.2em; }
