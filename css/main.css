@@ -3,9 +3,10 @@
   padding: 0; }
 
 body {
-  background: #fff;
+  background: #000;
   font-family: "Roboto"; }
 
 .page-title {
+  color: #fff;
   padding: 1em;
   text-align: center; }

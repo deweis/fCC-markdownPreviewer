@@ -1,6 +1,15 @@
 // Variables
-$body-bg: #fff;
+$body-bg: #000;
 $main-font: 'Roboto';
+
+// Functions
+@function set-text-color($bg-color) {
+  @if(lightness($bg-color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
 
 // Reset default margin / padding
 * {
@@ -15,6 +24,7 @@ body {
 }
 
 .page-title {
+  color: set-text-color($body-bg);
   padding: 1em;
   text-align: center;
 }
