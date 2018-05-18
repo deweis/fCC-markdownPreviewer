@@ -11,9 +11,22 @@
     <title>fCC - Markdown Previewer</title>
   </head>
   <body>
-    <header>
+    <header id="title">
       <h1 class="page-title">fCC Markdown Previewer</h1>
       <h3>Just type and watch..</h3>
     </header>
+    <script type="text/babel">
+      const element = (
+        <div>
+          <h1 class="page-title">fCC Markdown Previewer</h1>
+          <h3>Just type and watch..</h3>
+        </div>
+      );
+
+      ReactDOM.render(
+        element,
+        document.getElementById('title')
+      );
+    </script>
   </body>
 </html>
