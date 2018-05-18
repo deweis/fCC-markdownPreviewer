@@ -2,6 +2,14 @@
 @import 'variables';
 @import 'functions';
 
+// Mixins
+@mixin border-radius($radius: 5px) {  // default of 5px if no argument added
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 // Reset default margin / padding
 * {
   margin: 0;
@@ -15,9 +23,14 @@ body {
 }
 
 header {
+  border: 2px solid #fff;
+  @include border-radius($radius); // or just '@include border-radius;' for the default
   color: set-text-color($body-bg);
+  margin: 5px auto;
   padding: $padding;
   text-align: center;
+  width: 80%;
+
 
   h1 {
     padding: $padding / 5;
@@ -28,5 +41,6 @@ header {
 
   h3 {
     color: darken(set-text-color($body-bg), 20%);
+    padding: $padding / 5;
   }
 }
