@@ -16,11 +16,11 @@ body {
 
 header {
   color: set-text-color($body-bg);
-  padding: 1em;
+  padding: $padding;
   text-align: center;
 
   h1 {
-    padding: 0.2em;
+    padding: $padding / 5;
     &:hover {
       color: yellow;
     }
