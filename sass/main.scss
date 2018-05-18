@@ -34,13 +34,13 @@ header {
 
   h1 {
     padding: $padding / 5;
-    &:hover {
-      color: yellow;
-    }
   }
 
   h3 {
+    @extend h1;
     color: darken(set-text-color($body-bg), 20%);
-    padding: $padding / 5;
+    &:hover {
+      color: yellow;
+    }
   }
 }
