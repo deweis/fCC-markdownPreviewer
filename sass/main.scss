@@ -27,7 +27,7 @@ body {
 }
 
 header {
-  border: 2px solid #fff;
+  border: $border;
   @include border-radius($radius); // or just '@include border-radius;' for the default
   color: set-text-color($body-bg);
   margin: 5px auto;
@@ -45,6 +45,27 @@ header {
     color: darken(set-text-color($body-bg), 20%);
     &:hover {
       color: yellow;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px auto;
+  width: 90%;
+
+  .text-box {
+    height: 33vh;
+    width: 90%;
+    margin: 5px;
+    border: $border;
+    padding: 10px;
+    @include border-radius($radius);
+    @media screen and (min-width: $breakpoint) {
+      width: $breakpoint/2.6;
+      height: 70vh;
     }
   }
 }
