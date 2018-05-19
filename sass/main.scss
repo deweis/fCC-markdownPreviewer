@@ -20,6 +20,10 @@
 body {
   background: $body-bg;
   font-family: $main-font;
+  margin: 0 auto;
+  @media screen and (min-width: $breakpoint) {
+    width: $breakpoint;
+  }
 }
 
 header {
