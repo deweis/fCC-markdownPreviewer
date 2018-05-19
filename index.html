@@ -11,26 +11,38 @@
     <title>fCC - Markdown Previewer</title>
   </head>
   <body>
-    <header id="title">
-      <h1 class="page-title">fCC Markdown Previewer</h1>
-      <h3>Just type and watch..</h3>
-    </header>
-    <div class="main">
-      <textarea name="TextInput" class="text-box"></textarea>
-      <div class="text-box"></div>
-    </div>
+    <header id="title"></header>
+    <div id="main"></div>
     <script type="text/babel">
-      const element = (
-        <div>
-          <h1 class="page-title">fCC Markdown Previewer</h1>
-          <h3>Just type and watch..</h3>
-        </div>
-      );
 
-      ReactDOM.render(
-        element,
-        document.getElementById('title')
-      );
+      const Title = React.createClass({
+        render: function () {
+          return (
+            <div>
+              <h1 className="page-title">fCC Markdown Previewer</h1>
+              <h3>Just type and watch..</h3>
+            </div>
+          );
+        }
+      });
+
+      const TextInput = React.createClass({
+        render () {
+          return (<textarea className="text-box"></textarea>);
+        }
+      });
+
+      const TextOutput = React.createClass({
+        render () {
+          return (<div className="text-box"></div>);
+        }
+      });
+
+      ReactDOM.render(<Title />, document.getElementById('title'));
+      ReactDOM.render(<div className="container">
+                        <TextInput />
+                        <TextOutput />
+                      </div>, document.getElementById('main'));
     </script>
   </body>
 </html>

@@ -28,13 +28,13 @@ header {
     header h3:hover {
       color: yellow; }
 
-.main {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px auto;
   width: 90%; }
-  .main .text-box {
+  .container .text-box {
     height: 33vh;
     width: 90%;
     margin: 5px;
@@ -45,6 +45,6 @@ header {
     -ms-border-radius: 7px;
     border-radius: 7px; }
     @media screen and (min-width: 800px) {
-      .main .text-box {
+      .container .text-box {
         width: 307.69231px;
         height: 70vh; } }
