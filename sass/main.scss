@@ -64,7 +64,7 @@ header {
     padding: 10px;
     @include border-radius($radius);
     @media screen and (min-width: $breakpoint) {
-      width: percentage($breakpoint/2.6);
+      width: $breakpoint/2.6;
       height: 70vh;
     }
   }
