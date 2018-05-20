@@ -38,11 +38,6 @@ header {
 
   h1 {
     padding: $padding / 5;
-  }
-
-  h3 {
-    @extend h1;
-    color: darken(set-text-color($body-bg), 20%);
     &:hover {
       color: yellow;
     }
@@ -62,6 +57,7 @@ header {
     margin: 5px;
     border: $border;
     padding: 10px;
+    font-family: $main-font;
     @include border-radius($radius);
     @media screen and (min-width: $breakpoint) {
       width: $breakpoint/2.6;

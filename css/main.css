@@ -21,11 +21,9 @@ header {
   padding: 1em;
   text-align: center;
   width: 80%; }
-  header h1, header h3 {
+  header h1 {
     padding: 0.2em; }
-  header h3 {
-    color: #cccccc; }
-    header h3:hover {
+    header h1:hover {
       color: yellow; }
 
 .container {
@@ -40,6 +38,7 @@ header {
     margin: 5px;
     border: 2px solid #fff;
     padding: 10px;
+    font-family: "Roboto";
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;

@@ -17,18 +17,14 @@
 
       const Title = React.createClass({
         render: function () {
-          return (
-            <div>
-              <h1 className="page-title">fCC Markdown Previewer</h1>
-              <h3>Just type and watch..</h3>
-            </div>
-          );
+          return (<h1 className="page-title">fCC Markdown Previewer</h1>);
         }
       });
 
       const TextInput = React.createClass({
         render () {
-          return (<textarea className="text-box"></textarea>);
+          return (<textarea className="text-box" placeholder="Just type and watch.. ">
+                  </textarea>);
         }
       });
 
