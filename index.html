@@ -22,8 +22,13 @@
       });
 
       const TextInput = React.createClass({
+        edit: function () {
+          console.log('typing');
+        },
         render () {
-          return (<textarea className="text-box" placeholder="Just type and watch.. ">
+          return (<textarea className="text-box"
+                            placeholder="Just type and watch.. "
+                            onChange={this.edit}>
                   </textarea>);
         }
       });
