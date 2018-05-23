@@ -10,6 +10,12 @@
           border-radius: $radius;
 }
 
+@mixin big-screens {
+  @media screen and (min-width: $breakpoint-big) {
+    @content;
+  }
+}
+
 // Reset default margin / padding
 * {
   margin: 0;
@@ -21,8 +27,8 @@ body {
   background: $body-bg;
   font-family: $main-font;
   margin: 0 auto;
-  @media screen and (min-width: $breakpoint) {
-    width: $breakpoint;
+  @include big-screens {
+    width: $breakpoint-big;
   }
 }
 
@@ -60,8 +66,8 @@ header {
     padding: 10px;
     font-family: $main-font;
     @include border-radius($radius);
-    @media screen and (min-width: $breakpoint) {
-      width: $breakpoint/2.6;
+    @include big-screens {
+      width: $breakpoint-big/2.6;
       height: 70vh;
     }
   }
