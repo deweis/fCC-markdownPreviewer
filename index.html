@@ -21,29 +21,33 @@
         }
       });
 
-      const TextInput = React.createClass({
-        edit () {
-          console.log(event.target.value);
-        },
-        render () {
-          return (<textarea className="text-box"
-                            placeholder="Just type and watch.. "
-                            onChange={this.edit}>
-                  </textarea>);
-        }
-      });
+      const TextBoxes = React.createClass({
 
-      const TextOutput = React.createClass({
+        getInitialState () {
+          return {
+            content: ''
+          };
+        },
+
+        edit () {
+          this.setState({
+            content: event.target.value
+          })
+        },
+
         render () {
-          return (<div className="text-box"></div>);
+          return (<div className="container">
+                    <textarea className="text-box"
+                              placeholder="Just type and watch.. "
+                              onChange={this.edit}>
+                    </textarea>
+                    <div className="text-box">{this.state.content}</div>
+                  </div>);
         }
       });
 
       ReactDOM.render(<Title />, document.getElementById('title'));
-      ReactDOM.render(<div className="container">
-                        <TextInput />
-                        <TextOutput />
-                      </div>, document.getElementById('main'));
+      ReactDOM.render(<TextBoxes />, document.getElementById('main'));
     </script>
   </body>
 </html>
