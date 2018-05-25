@@ -65,6 +65,7 @@ header {
     border: $border;
     padding: 10px;
     font-family: $main-font;
+    white-space: pre-line;
     @include border-radius($radius);
     @include big-screens {
       width: $breakpoint-big/2.6;

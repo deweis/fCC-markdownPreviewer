@@ -52,6 +52,7 @@ header h1:hover {
   border: 2px solid #fff;
   padding: 10px;
   font-family: "Roboto";
+  white-space: pre-line;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
