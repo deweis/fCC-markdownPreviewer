@@ -26,8 +26,14 @@
 
         getInitialState () {
           return {
-            content: ''
-          };
+            content: "# Just type... \n\n ...some markup"
+          }
+        },
+
+        convertMarkup () {
+          return {
+            __html: marked(this.state.content)
+          }
         },
 
         edit () {
@@ -39,10 +45,10 @@
         render () {
           return (<div className="container">
                     <textarea className="text-box"
-                              placeholder="Just type and watch.. "
+                              placeholder={this.state.content}
                               onChange={this.edit}>
                     </textarea>
-                    <div className="text-box">{this.state.content}</div>
+                    <div className="text-box" dangerouslySetInnerHTML={this.convertMarkup()} />
                   </div>);
         }
       });
