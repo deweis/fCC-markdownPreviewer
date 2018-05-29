@@ -32,10 +32,6 @@ header h1 {
   padding: 0.2em;
 }
 
-header h1:hover {
-  color: yellow;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
