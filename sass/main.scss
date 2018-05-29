@@ -58,7 +58,6 @@ header {
   width: 90%;
 
   .text-box {
-    color: blue;
     height: 33vh;
     width: 90%;
     margin: 5px;
@@ -73,12 +72,9 @@ header {
     }
   }
 
-  .input {
-    color: black;
-  }
-
   .output {
-    overflow-wrap: break-word;
+    color: blue;
     overflow: auto;
+    overflow-wrap: break-word;
   }
 }
