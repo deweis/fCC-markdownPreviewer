@@ -76,4 +76,9 @@ header {
   .input {
     color: black;
   }
+
+  .output {
+    overflow-wrap: break-word;
+    overflow: auto;
+  }
 }

@@ -69,3 +69,8 @@ header h1:hover {
 .container .input {
   color: black;
 }
+
+.container .output {
+  overflow-wrap: break-word;
+  overflow: auto;
+}
