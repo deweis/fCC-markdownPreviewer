@@ -44,9 +44,9 @@
 
         render () {
           return (<div className="container">
-                    <textarea className="text-box"
+                    <textarea className="text-box input"
                               placeholder={this.state.content}
-                              onChange={this.edit}>
+                              onChange={this.edit} autoFocus>
                     </textarea>
                     <div className="text-box output" dangerouslySetInnerHTML={this.convertMarkup()} />
                   </div>);

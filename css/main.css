@@ -61,6 +61,10 @@ header h1 {
   }
 }
 
+.container .input:focus {
+  outline: none;
+}
+
 .container .output {
   color: blue;
   overflow: auto;
