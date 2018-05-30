@@ -70,3 +70,8 @@ header h1 {
   overflow: auto;
   overflow-wrap: break-word;
 }
+
+.container .output li {
+  margin-left: 1em;
+  white-space: normal;
+}

@@ -79,5 +79,10 @@ header {
     color: blue;
     overflow: auto;
     overflow-wrap: break-word;
+
+    li {
+      margin-left: 1em;
+      white-space: normal;
+    }
   }
 }
