@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://fb.me/react-0.14.3.min.js"></script>
     <script src="https://fb.me/react-dom-0.14.3.min.js"></script>
@@ -26,19 +27,19 @@
 
         getInitialState () {
           return {
-            content: "# Just type... \n\n ...some markup"
+            content: '# Just type... \n\n ...some markup'
           }
         },
 
         convertMarkup () {
           return {
-            __html: marked(this.state.content)
+            __html: marked(this.state.content) // convert markup using https://github.com/markedjs/marked
           }
         },
 
         edit () {
           this.setState({
-            content: event.target.value
+            content: DOMPurify.sanitize(event.target.value) // sanitize XSS using https://www.npmjs.com/package/dompurify
           })
         },
 
