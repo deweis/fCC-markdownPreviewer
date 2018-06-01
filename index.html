@@ -33,7 +33,7 @@
 
         convertMarkup () {
           return {
-            __html: marked(this.state.content) // convert markup using https://github.com/markedjs/marked
+            __html: marked(this.state.content, {gfm: true}) // convert markup using https://github.com/markedjs/marked
           }
         },
 
