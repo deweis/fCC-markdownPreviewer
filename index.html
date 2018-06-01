@@ -37,7 +37,7 @@
           }
         },
 
-        edit () {
+        edit (event) {
           this.setState({
             content: DOMPurify.sanitize(event.target.value) // sanitize XSS using https://www.npmjs.com/package/dompurify
           })
