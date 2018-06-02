@@ -27,26 +27,21 @@
 
         getInitialState () {
 
-          const placeholder =
-            `![React Logo](https://bit.ly/2sAbuhT)
+          const placeholder = `
+![React Logo](https://bit.ly/2sAbuhT)
 
-
-# Just type
-## some Markup
-
+# Just type..
+## ..Some markup
 > Quote whatever you like!
 
 - Have a look at the [Docs](https://marked.js.org/#/README.md#README.md)
-
-- **Do some** \`p>inline coding</p>\`
+- **Do some** \`inline coding\`
 
 \`\`\`
-// Or multiline coding
-<div>
-  <p>my Paragraph</p>
-</div>
+function multiLineCoding() {
+  ...just code here;
+}
 \`\`\`
-
 `;
 
           return {
@@ -78,8 +73,8 @@
           return (<div className="container">
                     <textarea id="editor"
                               className="text-box input"
-                              placeholder={this.state.content}
-                              onChange={this.edit} autoFocus>
+                              //placeholder={this.state.content}
+                              onChange={this.edit} autoFocus>{this.state.content}
                     </textarea>
                     <div id="preview"
                          className="text-box output"
@@ -91,5 +86,6 @@
       ReactDOM.render(<Title />, document.getElementById('title'));
       ReactDOM.render(<TextBoxes />, document.getElementById('main'));
     </script>
+    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
   </body>
 </html>
