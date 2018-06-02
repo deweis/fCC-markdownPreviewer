@@ -21,7 +21,7 @@ header {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   border-radius: 7px;
-  color: #fff;
+  color: #61dafb;
   margin: 5px auto;
   padding: 1em;
   text-align: center;
@@ -66,7 +66,7 @@ header h1 {
 }
 
 .container .output {
-  color: blue;
+  color: #61dafb;
   overflow: auto;
   overflow-wrap: break-word;
 }
@@ -74,4 +74,27 @@ header h1 {
 .container .output li {
   margin-left: 1em;
   white-space: normal;
+}
+
+.container .output table {
+  border-collapse: collapse;
+}
+
+.container .output th, .container .output td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: left;
+}
+
+.container .output blockquote {
+  line-height: 0.6em;
+  padding: 0.3em;
+  margin-left: 1em;
+  border-left: 3px solid gray;
+}
+
+.container .output img {
+  display: block;
+  margin: auto;
+  width: 7em;
 }

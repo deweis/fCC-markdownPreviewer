@@ -3,6 +3,6 @@
   @if(lightness($bg-color) > 50) {  // if lightness of the bg-color is greater than 50%
     @return #000;                   // set the color to black
   } @else {
-    @return #fff;                   // else set it to white
+    @return $react-color;          // else set it to the react color
   }
 }

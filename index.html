@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>
     <script src="https://fb.me/react-0.14.3.min.js"></script>
     <script src="https://fb.me/react-dom-0.14.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
@@ -26,14 +26,39 @@
       const TextBoxes = React.createClass({
 
         getInitialState () {
+
+          const placeholder =
+            `![React Logo](https://bit.ly/2sAbuhT)
+
+
+# Just type
+## some Markup
+
+> Quote whatever you like!
+
+- Have a look at the [Docs](https://marked.js.org/#/README.md#README.md)
+
+- **Do some** \`p>inline coding</p>\`
+
+\`\`\`
+// Or multiline coding
+<div>
+  <p>my Paragraph</p>
+</div>
+\`\`\`
+
+`;
+
           return {
-            content: '# Just type... \n\n ...some markup'
+            content: placeholder
           }
         },
 
         convertMarkup () {
           return {
-            __html: marked(this.state.content, {gfm: true}) // convert markup using https://github.com/markedjs/marked
+            __html: marked(this.state.content, { // convert markup using https://github.com/markedjs/marked
+              gfm: true,
+              breaks: true})
           }
         },
 
