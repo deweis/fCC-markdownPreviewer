@@ -50,7 +50,9 @@
                               placeholder={this.state.content}
                               onChange={this.edit} autoFocus>
                     </textarea>
-                    <div className="text-box output" dangerouslySetInnerHTML={this.convertMarkup()} />
+                    <div id="preview"
+                         className="text-box output"
+                         dangerouslySetInnerHTML={this.convertMarkup()} />
                   </div>);
         }
       });
