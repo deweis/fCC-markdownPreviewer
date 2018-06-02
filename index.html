@@ -55,8 +55,14 @@
         },
 
         convertMarkup () {
+
+          // Open Links in new tab by https://github.com/markedjs/marked/issues/655
+          const renderer = new marked.Renderer();
+          renderer.link = ( href, title, text ) => `<a target="_blank" href="${ href }" title="${ title }">${ text }</a>`;
+
           return {
             __html: marked(this.state.content, { // convert markup using https://github.com/markedjs/marked
+              renderer: renderer,
               gfm: true,
               breaks: true})
           }
