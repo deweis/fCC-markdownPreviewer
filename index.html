@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>
     <script src="https://fb.me/react-0.14.3.min.js"></script>
@@ -13,13 +16,30 @@
     <title>fCC - Markdown Previewer</title>
   </head>
   <body>
-    <header id="title"></header>
-    <div id="main"></div>
+
+    <div id="root"></div>
+    <!-- <pre>
+      <code>
+        # fCC-markdownPreviewer
+        freeCodeCamp Challenge - Front End Libraries Projects - Build a Markdown Previewer
+
+        - **Objective:** Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/GrZVVO.
+
+        function testFunction() {
+          console.log('hi there...');
+        }
+      </code>
+    </pre> -->
+
     <script type="text/babel">
 
       const Title = React.createClass({
         render () {
-          return (<h1 className="page-title">fCC Markdown Previewer</h1>);
+          return (
+            <header>
+              <h1 className="page-title">fCC Markdown Previewer</h1>
+            </header>
+          );
         }
       });
 
@@ -73,7 +93,7 @@ function multiLineCoding() {
           return (<div className="container">
                     <textarea id="editor"
                               className="text-box input"
-                              //placeholder={this.state.content}
+                              //placeholder={this.state.content} // taken away to pass fCC tests
                               onChange={this.edit} autoFocus>{this.state.content}
                     </textarea>
                     <div id="preview"
@@ -83,8 +103,19 @@ function multiLineCoding() {
         }
       });
 
-      ReactDOM.render(<Title />, document.getElementById('title'));
-      ReactDOM.render(<TextBoxes />, document.getElementById('main'));
+      const App = React.createClass({
+        render () {
+          return (
+            <div>
+              <Title />
+              <TextBoxes />
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+
     </script>
     <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
   </body>

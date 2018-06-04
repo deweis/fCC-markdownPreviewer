@@ -1,8 +1,12 @@
 // Variables
+$atom-gray: #9da5b4;
+$atom-bg: #21252b;
 $body-bg: #000;
 $react-color: #61dafb;
-$border: 2px solid #fff;
+$border: 2px solid $atom-gray;
 $breakpoint-big: 800px;
 $main-font: 'Roboto';
 $padding: 1em;
 $radius: 7px;
+$react-bg-light: #282c34;
+$react-bg-dark: #20232a

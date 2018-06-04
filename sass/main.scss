@@ -24,7 +24,7 @@
 
 // CSS...
 body {
-  background: $body-bg;
+  background: $react-bg-dark;
   font-family: $main-font;
   margin: 0 auto;
   @include big-screens {
@@ -70,6 +70,8 @@ header {
   }
 
   .input {
+    background: $react-bg-light;
+    color: #ccc;
     &:focus {
       outline: none;
     }
