@@ -27,20 +27,20 @@ body {
   background: $react-bg-dark;
   font-family: $main-font;
   margin: 0 auto;
-  @include big-screens {
-    width: $breakpoint-big;
-  }
 }
 
 header {
   border: $border;
   @include border-radius($radius); // or just '@include border-radius;' for the default
   color: set-text-color($body-bg);
-  margin: 5px auto;
+  margin: 10px auto;
   padding: $padding;
   text-align: center;
   width: 80%;
-
+  @include big-screens {
+    width: $breakpoint-big-header;
+    margin: 20px auto;
+  }
 
   h1 {
     padding: $padding / 5;
@@ -53,6 +53,9 @@ header {
   justify-content: center;
   margin: 5px auto;
   width: 90%;
+  @include big-screens {
+    width: 100%;
+  }
 
   .text-box {
     height: 33vh;
@@ -64,8 +67,8 @@ header {
     white-space: pre-line;
     @include border-radius($radius);
     @include big-screens {
-      width: $breakpoint-big/2.6;
-      height: 70vh;
+      width: 45%;//width: $breakpoint-big/2.6;
+      height: 75vh;
     }
   }
 
