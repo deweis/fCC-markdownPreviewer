@@ -69,6 +69,7 @@ header h1 {
 }
 
 .container .input {
+  font-family: monospace;
   background: #282c34;
   color: #ccc;
 }

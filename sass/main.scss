@@ -73,6 +73,7 @@ header {
   }
 
   .input {
+    font-family: monospace;
     background: $react-bg-light;
     color: #ccc;
     &:focus {
