@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>
     <script src="https://fb.me/react-0.14.3.min.js"></script>
@@ -18,18 +17,6 @@
   <body>
 
     <div id="root"></div>
-    <!-- <pre>
-      <code>
-        # fCC-markdownPreviewer
-        freeCodeCamp Challenge - Front End Libraries Projects - Build a Markdown Previewer
-
-        - **Objective:** Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/GrZVVO.
-
-        function testFunction() {
-          console.log('hi there...');
-        }
-      </code>
-    </pre> -->
 
     <script type="text/babel">
 
@@ -47,8 +34,7 @@
 
         getInitialState () {
 
-          const placeholder = `
-![React Logo](https://bit.ly/2sAbuhT)
+          const placeholder = `![React Logo](https://bit.ly/2sAbuhT)
 
 # Just type..
 ## ..Some markup
@@ -57,9 +43,10 @@
 - Have a look at the [Docs](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 - **Do some** \`inline coding\`
 - or multiline:
+
 \`\`\`
-function multiLineCoding() {
-...just code here;
+function myFunction() {
+  console.log('built with React and SASS');
 }
 \`\`\`
 `;
@@ -79,7 +66,11 @@ function multiLineCoding() {
             __html: marked(this.state.content, { // convert markup using https://github.com/markedjs/marked
               renderer: renderer,
               gfm: true,
-              breaks: true})
+              highlight: (code, language) => language   // snippet from https://bernardodiasdacruz.com/2018/03/17/creating-react-component-with-markdown-renderer-and-code-syntax-highlight/
+                ? hljs.highlight(language, code).value
+                : hljs.highlightAuto(code).value,
+              breaks: true
+            })
           }
         },
 

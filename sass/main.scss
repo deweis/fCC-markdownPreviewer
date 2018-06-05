@@ -16,12 +16,6 @@
   }
 }
 
-// Reset default margin / padding
-* {
-  margin: 0;
-  padding: 0;
-}
-
 // CSS...
 body {
   background: $react-bg-dark;
@@ -34,7 +28,6 @@ header {
   @include border-radius($radius); // or just '@include border-radius;' for the default
   color: set-text-color($body-bg);
   margin: 10px auto;
-  padding: $padding;
   text-align: center;
   width: 80%;
   @include big-screens {
@@ -52,10 +45,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px auto;
-  width: 90%;
-  @include big-screens {
-    width: 100%;
-  }
+  width: 100%;
 
   .text-box {
     height: 33vh;
@@ -64,7 +54,7 @@ header {
     border: $border;
     padding: 10px;
     font-family: $main-font;
-    white-space: pre-line;
+    //white-space: pre-wrap;
     @include border-radius($radius);
     @include big-screens {
       width: 45%;//width: $breakpoint-big/2.6;
@@ -102,7 +92,7 @@ header {
     }
 
     blockquote {
-      line-height: 0.6em;
+      line-height: 0.2em;
       padding: 0.3em;
       margin-left: 1em;
       border-left: 3px solid gray;
