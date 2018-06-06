@@ -96,5 +96,9 @@ header h1 {
 .container .output img {
   display: block;
   margin: auto;
-  width: 7em;
+  max-width: 15em;
+}
+
+.container .output img[alt="React Logo"] {
+  width: 8em;
 }
