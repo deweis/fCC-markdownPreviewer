@@ -1,0 +1,22 @@
+cd c:\git\fCC-markdownPreviewer
+npm start
+
+
+SASS Tutorial next:
+  https://www.youtube.com/watch?v=NjijYdk2caI&index=30&list=PL2CB1F80266E986EA
+  Check: https://sass-lang.com/guide / https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+  Check: http://thesassway.com/beginner
+  --> Check later again:
+    -- Compass/Globbing: https://www.youtube.com/watch?v=ZLwg7bUXC90&index=21&list=PL2CB1F80266E986E
+    -- Juice, Mixings for life: http://kylebrumm.com/juice/
+
+React Tutorial next:
+  On Udemy now: https://www.udemy.com/
+  // Build a website using React, Sass, Gulp and Node.js: https://www.youtube.com/watch?v=nusgoj74a3Y
+  // The Comment Board: https://www.youtube.com/watch?v=-AbaV3nrw6E&index=1&list=PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA
+  // Check: https://react-cn.github.io/react/docs/getting-started.html
+
+TBD:
+  - FEATURE: Minimize editor/preview (fCC forum)
+  - FEATURE: Add code highlighting in editor (fCC forum)
+  - check other projects: https://forum.freecodecamp.org/t/lets-discuss-your-markdown-previewer/6180/12
